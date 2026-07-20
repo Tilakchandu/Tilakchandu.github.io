@@ -4,168 +4,136 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tilak Chandu Kotapati — AI/ML Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --border:#2a3441;
+    --text:#e6edf3; --muted:#8b949e; --accent:#39d353; --accent2:#58a6ff;
+    --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;
+    background-image:radial-gradient(circle at 20% 0%,rgba(57,211,83,.06),transparent 40%),radial-gradient(circle at 80% 20%,rgba(88,166,255,.06),transparent 40%);}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+  .site-header{border-bottom:1px solid var(--border);position:sticky;top:0;
+    background:rgba(13,17,23,.85);backdrop-filter:blur(8px);z-index:10}
+  .site-header .wrap{display:flex;align-items:center;gap:12px;padding:16px 24px}
+  .brand{font-family:var(--mono);font-weight:700;font-size:1rem}
+  .brand-tag{font-family:var(--mono);color:var(--accent);font-size:.85rem;
+    border:1px solid var(--border);padding:2px 8px;border-radius:6px}
+
+  .hero{padding:80px 0 48px}
+  .eyebrow{font-family:var(--mono);color:var(--muted);font-size:.85rem;
+    letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;font-weight:800;
+    background:linear-gradient(90deg,#e6edf3,#8b949e);-webkit-background-clip:text;
+    background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:24px}
+  .hero-bio{font-size:1.1rem;color:var(--text);max-width:70ch}
+
+  .section-label{font-family:var(--mono);color:var(--accent);font-size:.8rem;
+    letter-spacing:.1em;text-transform:uppercase;margin:56px 0 8px}
+
+  .prop{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--accent);
+    border-radius:10px;padding:24px 28px;color:var(--muted);font-size:1.02rem}
+
+  .artifact-tag{font-family:var(--mono);color:var(--accent2);font-size:.8rem;
+    letter-spacing:.1em;text-transform:uppercase;margin-top:64px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;
+    padding:32px;margin-top:16px;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--accent2)}
+  .card h2{font-size:1.5rem;font-weight:700;margin-bottom:8px}
+  .card .role{color:var(--muted);font-size:.95rem;margin-bottom:20px;font-style:italic}
+  .field{margin-top:20px}
+  .field-key{font-family:var(--mono);color:var(--accent);font-size:.9rem;
+    display:block;margin-bottom:6px}
+  .field-key::before{content:'> ';color:var(--muted)}
+  .field p{color:#c9d1d9}
+  .tools{font-family:var(--mono);font-size:.9rem;color:var(--muted);
+    background:var(--panel2);border-radius:8px;padding:12px 16px}
+  .links{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+  .links a{font-family:var(--mono);font-size:.9rem;border:1px solid var(--border);
+    padding:8px 16px;border-radius:8px;transition:background .2s,border-color .2s}
+  .links a:hover{background:var(--panel2);border-color:var(--accent2);text-decoration:none}
+
+  footer{border-top:1px solid var(--border);margin-top:80px;padding:32px 0;
+    text-align:center;color:var(--muted);font-family:var(--mono);font-size:.85rem}
+
+  @media(max-width:600px){.hero{padding:48px 0 32px}.card{padding:24px}}
+</style>
 </head>
 <body>
-
-<div class="grid-overlay" aria-hidden="true"></div>
-
 <header class="site-header">
-  <span class="brand">T. Kotapati</span>
-  <span class="brand-tag">/ AI-ML-LOG</span>
+  <div class="wrap">
+    <span class="brand">T. Kotapati</span>
+    <span class="brand-tag">/ AI-ML-LOG</span>
+  </div>
 </header>
 
-<main>
-
-  <!-- HERO -->
+<main class="wrap">
   <section class="hero">
-    <p class="eyebrow">AI/ML Graduate Student &middot; Indiana Wesleyan University</p>
+    <p class="eyebrow">AI/ML Graduate Student · Indiana Wesleyan University</p>
     <h1>Tilak Chandu Kotapati</h1>
-    <p class="hero-bio">
-      I come to artificial intelligence and machine learning from a finance and accounting
-      background, which means I am learning this field the way most working professionals
-      eventually will: from scratch, alongside a full-time career, one workshop at a time.
-      This portfolio is a running log of that process, built to show the actual work,
-      not a highlight reel.
-    </p>
+    <p class="hero-bio">I come to artificial intelligence and machine learning from a finance and accounting background, which means I am learning this field the way most working professionals eventually will: from scratch, alongside a full-time career, one workshop at a time. This portfolio is a running log of that process, built to show the actual work, not a highlight reel.</p>
   </section>
 
-  <!-- VALUE PROPOSITION -->
-  <section class="panel value-panel">
-    <p class="mono-label">&gt; personal_value_proposition</p>
-    <p class="value-text">
-      I document each step of learning AI/ML honestly, including what did not work the first
-      time and how it got fixed, so other students and early-career professionals coming from
-      a non-technical background have a clearer, more realistic path than a polished
-      highlight reel would give them. My finance background shapes how I approach every
-      project: I care less about a model looking impressive and more about whether it
-      actually holds up when a real person relies on it.
-    </p>
-  </section>
+  <p class="section-label">personal_value_proposition</p>
+  <div class="prop">I document each step of learning AI/ML honestly, including what did not work the first time and how it got fixed, so other students and early-career professionals coming from a non-technical background have a clearer, more realistic path than a polished highlight reel would give them. My finance background shapes how I approach every project: I care less about a model looking impressive and more about whether it actually holds up when a real person relies on it.</div>
 
-  <!-- ARTIFACT 1 -->
-  <section class="artifact">
-    <p class="artifact-index">ARTIFACT 01 &mdash; AI LAB, WORKSHOP 1</p>
+  <p class="artifact-tag">Artifact 01 — AI Lab, Workshop 1</p>
+  <article class="card">
     <h2>Budget Coach: A Custom GPT for Beginner Budgeting</h2>
-
-    <div class="spec-sheet">
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; objective</p>
-        <p class="spec-val">
-          To design and build a working AI assistant using OpenAI's Custom GPT builder,
-          applying the design thinking framework (empathy, define, ideate, prototype, test)
-          to a real, narrow problem: helping someone budget for the first time without
-          feeling overwhelmed by it.
-        </p>
-      </div>
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; process</p>
-        <p class="spec-val">
-          Started in the empathy phase by identifying that most first-time budgeters do not
-          fail from a lack of effort, they fail from never learning a simple framework and
-          feeling judged when they try. That led to a strict design rule: the assistant asks
-          about the user's actual struggle before it ever asks for numbers. The first build
-          broke this rule, it jumped straight to income and expenses, so the instructions
-          were rewritten and re-tested until the conversation opened the right way every time.
-          The final version was tested against a full realistic budgeting scenario, including
-          income, fixed expenses, a week of tracked spending, and a follow-up habit change.
-        </p>
-      </div>
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; tools</p>
-        <p class="spec-val">
-          ChatGPT Custom GPT builder &middot; Design Thinking framework &middot;
-          OpenAI usage policy review
-        </p>
-      </div>
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; value_proposition</p>
-        <p class="spec-val">
-          This artifact is evidence that I can take an AI tool from a vague idea to a working,
-          tested product with real boundaries, not just a single clever prompt. For other
-          AI/ML students, it is a concrete example of applying the design thinking process
-          outside of a lecture, including the mistake I had to catch and fix along the way,
-          which is the part most portfolios leave out.
-        </p>
-      </div>
-
+    <div class="field">
+      <span class="field-key">objective</span>
+      <p>To design and build a working AI assistant using OpenAI's Custom GPT builder, applying the design thinking framework (empathy, define, ideate, prototype, test) to a real, narrow problem: helping someone budget for the first time without feeling overwhelmed by it.</p>
     </div>
-
-    <div class="artifact-links">
-      <a class="btn btn-primary" href="https://chatgpt.com/share/6a53ef7a-e168-83ea-86a4-cab3702cf3b1" target="_blank" rel="noopener">View a Budget Coach conversation &rarr;</a>
-      <a class="btn btn-secondary" href="assets/AI_Lab_Documentation.pdf" target="_blank" rel="noopener">View full documentation &rarr;</a>
+    <div class="field">
+      <span class="field-key">process</span>
+      <p>Started in the empathy phase by identifying that most first-time budgeters do not fail from a lack of effort, they fail from never learning a simple framework and feeling judged when they try. That led to a strict design rule: the assistant asks about the user's actual struggle before it ever asks for numbers. The first build broke this rule, it jumped straight to income and expenses, so the instructions were rewritten and re-tested until the conversation opened the right way every time. The final version was tested against a full realistic budgeting scenario, including income, fixed expenses, a week of tracked spending, and a follow-up habit change.</p>
     </div>
-  </section>
+    <div class="field">
+      <span class="field-key">tools</span>
+      <p class="tools">ChatGPT Custom GPT builder · Design Thinking framework · OpenAI usage policy review</p>
+    </div>
+    <div class="field">
+      <span class="field-key">value_proposition</span>
+      <p>This artifact is evidence that I can take an AI tool from a vague idea to a working, tested product with real boundaries, not just a single clever prompt. For other AI/ML students, it is a concrete example of applying the design thinking process outside of a lecture, including the mistake I had to catch and fix along the way, which is the part most portfolios leave out.</p>
+    </div>
+    <div class="links">
+      <a href="https://chatgpt.com/share/6a53ef7a-e168-83ea-86a4-cab3702cf3b1" target="_blank" rel="noopener">View a Budget Coach conversation →</a>
+      <a href="assets/AI_Lab_Documentation.pdf">View full documentation →</a>
+    </div>
+  </article>
 
-  <!-- ARTIFACT 2 -->
-  <section class="artifact artifact-two">
-    <p class="artifact-index">ARTIFACT 02 &mdash; GROUP PROJECT, WORKSHOP 2</p>
+  <p class="artifact-tag">Artifact 02 — Group Project, Workshop 2</p>
+  <article class="card">
     <h2>ML Justification: Real-Time Fraud Detection at Stripe</h2>
-    <p class="artifact-subtitle">My contribution to Group 3's Financial Services &amp; Banking industry analysis, a 4-person team project</p>
-
-    <div class="spec-sheet">
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; objective</p>
-        <p class="spec-val">
-          Within a 4-person group project analyzing AI in Financial Services and Banking, my
-          assigned role was ML Specialist: identify a real-world company using traditional
-          machine learning for a specific problem, and build a clear, evidence-backed case for
-          why that approach fits.
-        </p>
-      </div>
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; process</p>
-        <p class="spec-val">
-          Researched Stripe's Radar fraud detection system and identified gradient boosted
-          decision trees (XGBoost) as the underlying algorithm. Mapped the engineered features
-          behind the model, device fingerprint, IP-to-billing distance, purchase velocity, and
-          network-wide card history, then built the case for interpretability as the deciding
-          factor over a more opaque deep learning approach. Found and cited a peer-reviewed
-          source supporting tree-based methods on imbalanced fraud data. My two slides were
-          then combined with three teammates' independently researched sections into one
-          14-slide group deck covering both machine learning and deep learning approaches
-          across the same industry.
-        </p>
-      </div>
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; tools</p>
-        <p class="spec-val">
-          PowerPoint &middot; Stripe engineering documentation &middot; Google Scholar &middot;
-          peer-reviewed research (Nobel et al., 2024)
-        </p>
-      </div>
-
-      <div class="spec-row">
-        <p class="spec-key">&gt; value_proposition</p>
-        <p class="spec-val">
-          This artifact shows a different skill than Artifact 1: working inside a defined role
-          on a team and delivering a scoped, source-backed technical analysis that had to fit
-          logically and visually with three other people's independent work. It demonstrates
-          that I can research a real company's ML approach, justify a technical choice with
-          evidence, and communicate it clearly to an audience that may not have a deep
-          technical background.
-        </p>
-      </div>
-
+    <p class="role">My contribution to Group 3's Financial Services &amp; Banking industry analysis, a 4-person team project</p>
+    <div class="field">
+      <span class="field-key">objective</span>
+      <p>Within a 4-person group project analyzing AI in Financial Services and Banking, my assigned role was ML Specialist: identify a real-world company using traditional machine learning for a specific problem, and build a clear, evidence-backed case for why that approach fits.</p>
     </div>
-
-    <div class="artifact-links">
-      <a class="btn btn-primary" href="assets/Group3_Full_Deck.pdf" target="_blank" rel="noopener">View full group deck &rarr;</a>
+    <div class="field">
+      <span class="field-key">process</span>
+      <p>Researched Stripe's Radar fraud detection system and identified gradient boosted decision trees (XGBoost) as the underlying algorithm. Mapped the engineered features behind the model, device fingerprint, IP-to-billing distance, purchase velocity, and network-wide card history, then built the case for interpretability as the deciding factor over a more opaque deep learning approach. Found and cited a peer-reviewed source supporting tree-based methods on imbalanced fraud data. My two slides were then combined with three teammates' independently researched sections into one 14-slide group deck covering both machine learning and deep learning approaches across the same industry.</p>
     </div>
-  </section>
-
+    <div class="field">
+      <span class="field-key">tools</span>
+      <p class="tools">PowerPoint · Stripe engineering documentation · Google Scholar · peer-reviewed research (Nobel et al., 2024)</p>
+    </div>
+    <div class="field">
+      <span class="field-key">value_proposition</span>
+      <p>This artifact shows a different skill than Artifact 1: working inside a defined role on a team and delivering a scoped, source-backed technical analysis that had to fit logically and visually with three other people's independent work. It demonstrates that I can research a real company's ML approach, justify a technical choice with evidence, and communicate it clearly to an audience that may not have a deep technical background.</p>
+    </div>
+    <div class="links">
+      <a href="assets/Group3_Full_Deck.pdf">View full group deck →</a>
+    </div>
+  </article>
 </main>
 
-<footer class="site-footer">
-  <p>Built for AIML-500, Indiana Wesleyan University &middot; Updated July 2026</p>
-</footer>
-
+<footer>© 2026 Tilak Chandu Kotapati · AI-ML-LOG</footer>
 </body>
 </html>
